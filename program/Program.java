@@ -34,6 +34,7 @@ public class Program {
 			case "1":
 
 				ar = new BumperCars();
+
 				break;
 			case "2":
 				ar = new JumpAndSmile();
@@ -63,6 +64,8 @@ public class Program {
 			}
 			ar.run();
 			ar.sell();
+			// ar.getPrice();
+
 		}
 
 	}
