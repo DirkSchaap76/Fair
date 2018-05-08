@@ -4,14 +4,14 @@ public class MirrorMaze extends AmusementRide {
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
+		System.out.println("Mirror maze. Ride is run.");
 
 	}
 
 	@Override
 	public void sell() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Mirror maze. Sale is made.");
+
 	}
 
 }

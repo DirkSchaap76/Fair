@@ -4,14 +4,14 @@ public class JumpAndSmile extends AmusementRide {
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
+		System.out.println("Jump and Smile. Ride is run.");
 
 	}
 
 	@Override
 	public void sell() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Jump and Smile. Sale is made.");
+
 	}
 
 }

@@ -5,6 +5,10 @@ import java.util.Scanner;
 import rides.AmusementRide;
 import rides.BumperCars;
 import rides.HauntedHouse;
+import rides.JumpAndSmile;
+import rides.MirrorMaze;
+import rides.TopSpin;
+import rides.Tornado;
 
 public class Program {
 
@@ -22,29 +26,32 @@ public class Program {
 		Scanner input = new Scanner(System.in);
 
 		AmusementRide ar = new AmusementRide();
-		// boolean keepGoing = true;
+
 		while (true) {
 			String option = input.nextLine();
 
 			switch (option) {
 			case "1":
-				// BumperCars bumpy = new BumperCars();
+
 				ar = new BumperCars();
 				break;
 			case "2":
-
+				ar = new JumpAndSmile();
 				break;
 			case "3":
+				ar = new MirrorMaze();
 				break;
 			case "4":
 				ar = new HauntedHouse();
 				break;
 			case "5":
+				ar = new TopSpin();
 				break;
 			case "6":
+				ar = new Tornado();
 				break;
 			case "q":
-				// keepGoing = false;
+
 				System.out.println("Program ended.");
 				input.close();
 				System.exit(0);

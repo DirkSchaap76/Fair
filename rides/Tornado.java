@@ -4,13 +4,13 @@ public class Tornado extends AmusementRide {
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
+		System.out.println("Tornado. Ride is run.");
 
 	}
 
 	@Override
 	public void sell() {
-		// TODO Auto-generated method stub
+		System.out.println("Tornado. Sale is made.");
 		
 	}
 
