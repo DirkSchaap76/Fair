@@ -4,7 +4,13 @@ public class HauntedHouse extends AmusementRide {
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
+		System.out.println("Haunted House. Ride is run.");
+
+	}
+
+	@Override
+	public void sell() {
+		System.out.println("Haunted House. Sale is made.");
 
 	}
 

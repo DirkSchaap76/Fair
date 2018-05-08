@@ -8,4 +8,10 @@ public class MirrorMaze extends AmusementRide {
 
 	}
 
+	@Override
+	public void sell() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

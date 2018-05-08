@@ -12,4 +12,11 @@ public class BumperCars extends AmusementRide {
 
 	}
 
+	@Override
+	public void sell() {
+		System.out.println("Bumper Cars. Sale is made.");
+		
+	}
+	
+
 }

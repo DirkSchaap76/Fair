@@ -1,7 +1,10 @@
 package program;
 
 import java.util.Scanner;
+
+import rides.AmusementRide;
 import rides.BumperCars;
+import rides.HauntedHouse;
 
 public class Program {
 
@@ -18,38 +21,42 @@ public class Program {
 
 		Scanner input = new Scanner(System.in);
 
-		boolean keepGoing = true;
-		while (keepGoing) {
+		AmusementRide ar = new AmusementRide();
+		// boolean keepGoing = true;
+		while (true) {
 			String option = input.nextLine();
 
 			switch (option) {
 			case "1":
-				BumperCars bumpy = new BumperCars();
-				bumpy.run();
+				// BumperCars bumpy = new BumperCars();
+				ar = new BumperCars();
 				break;
 			case "2":
+
 				break;
 			case "3":
 				break;
 			case "4":
+				ar = new HauntedHouse();
 				break;
 			case "5":
 				break;
 			case "6":
 				break;
 			case "q":
-				keepGoing = false;
-
+				// keepGoing = false;
+				System.out.println("Program ended.");
+				input.close();
+				System.exit(0);
 				break;
 			default:
 				System.out.println("Invalid choice. Please try again.");
 				break;
 
 			}
+			ar.run();
+			ar.sell();
 		}
-
-		input.close();
-		System.out.println("Program ended.");
 
 	}
 

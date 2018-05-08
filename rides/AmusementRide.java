@@ -1,11 +1,15 @@
 package rides;
 
-public abstract class AmusementRide {
+public  class AmusementRide {
 	public String name;
 	public double price;
 	public int timesRun;
 	
-	public abstract void run(); 
+	public  void run() {}; 
+	public  void sell() {};
+	
 
 
 }
+
+
