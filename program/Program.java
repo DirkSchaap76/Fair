@@ -18,8 +18,7 @@ public class Program {
 
 		Scanner input = new Scanner(System.in);
 
-		boolean keepGoing = true;
-		while (keepGoing) {
+		while (true) {
 			String option = input.nextLine();
 
 			switch (option) {
@@ -38,7 +37,7 @@ public class Program {
 			case "6":
 				break;
 			case "q":
-				keepGoing = false;
+				System.exit(0);
 
 				break;
 			default:
