@@ -57,6 +57,9 @@ public class Program {
 				cd = new CashDesk();
 				System.out.println(cd.getCountOfTickets());
 				break;
+			case "m":
+				menu();
+				break;
 			case "q":
 
 				System.out.println("Program ended.");

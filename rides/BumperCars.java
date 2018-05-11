@@ -23,7 +23,7 @@ public class BumperCars extends AmusementRide {
 
 	public void sell() {
 
-		System.out.println("selling a BumperCars");
+		System.out.println("BumperCars: a sale is made.");
 
 	}
 
@@ -31,7 +31,7 @@ public class BumperCars extends AmusementRide {
 
 	public void run() {
 
-		System.out.println("running a BumperCars");
+		System.out.println("BumperCars: ride is run.");
 
 	}
 
