@@ -2,15 +2,45 @@ package rides;
 
 public class HauntedHouse extends AmusementRide {
 
-	@Override
-	public void run() {
-		System.out.println("Haunted House. Ride is run.");
+	private static int counter = 0;
+
+	public final static double price = 3.20;
+
+	public HauntedHouse() {
+
+		this.name = "HauntedHouse";
+
+		counter++;
+
+	}
+
+	public static int getCounter() {
+
+		return counter;
 
 	}
 
 	@Override
+
 	public void sell() {
-		System.out.println("Haunted House. Sale is made.");
+
+		System.out.println("selling a HauntedHouse");
+
+	}
+
+	@Override
+
+	public void run() {
+
+		System.out.println("running a HauntedHouse");
+
+	}
+
+	@Override
+
+	public String toString() {
+
+		return "name of ride:" + this.name + "\tPrice of ride:" + HauntedHouse.price;
 
 	}
 

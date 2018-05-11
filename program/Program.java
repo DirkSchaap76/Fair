@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import rides.AmusementRide;
 import rides.BumperCars;
+import rides.CashDesk;
 import rides.HauntedHouse;
 import rides.JumpAndSmile;
 import rides.MirrorMaze;
@@ -14,47 +15,52 @@ public class Program {
 
 	public static void main(String[] args) {
 
-		System.out.println("Main menu.");
-		System.out.println("Press 1 for Bumper Cars.");
-		System.out.println("Press 2 for Jump and Smile.");
-		System.out.println("Press 3 for Mirror Maze.");
-		System.out.println("Press 4 fot Haunted House.");
-		System.out.println("Press 5 for Top Spin.");
-		System.out.println("Press 6 for Tornado.");
-		System.out.println("Press q to quit.");
-
-		Scanner input = new Scanner(System.in);
-
-		AmusementRide ar = new AmusementRide();
+		menu();
+		String input = "";
+		CashDesk cd = null;
+		Scanner scan = new Scanner(System.in);
+		AmusementRide game = null;
 
 		while (true) {
-			String option = input.nextLine();
+			String option = scan.nextLine();
 
 			switch (option) {
 			case "1":
-
-				ar = new BumperCars();
-
+				game = new BumperCars();
+				game.run();
 				break;
 			case "2":
-				ar = new JumpAndSmile();
+				game = new JumpAndSmile();
+				game.run();
 				break;
 			case "3":
-				ar = new MirrorMaze();
+				game = new MirrorMaze();
+				game.run();
 				break;
 			case "4":
-				ar = new HauntedHouse();
+				game = new HauntedHouse();
+				game.run();
 				break;
 			case "5":
-				ar = new TopSpin();
+				game = new TopSpin();
+				game.run();
 				break;
 			case "6":
-				ar = new Tornado();
+				game = new Tornado();
+				game.run();
+				break;
+			case "r":
+				cd = new CashDesk();
+				System.out.println(cd.getRevenue());
+				break;
+			case "t":
+				cd = new CashDesk();
+				System.out.println(cd.getCountOfTickets());
 				break;
 			case "q":
 
 				System.out.println("Program ended.");
-				input.close();
+				scan.close();
 				System.exit(0);
 				break;
 			default:
@@ -62,11 +68,16 @@ public class Program {
 				break;
 
 			}
-			ar.run();
-			ar.sell();
-			// ar.getPrice();
 
 		}
+
+	}
+
+	public static void menu() {
+
+		System.out.println("1-BumperCars\n2-JumpAndSmile \n3-MirrorMaze " + "\n4-HauntedHouse \n5-TopSpin"
+				+ " \n6-Tornado \n7-press 'r' to show the revenue\n"
+				+ "8-press 't' to show the total soled tickets\n9-press 'm' to show menu\n10-Press 'q' for exit");
 
 	}
 

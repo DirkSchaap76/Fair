@@ -1,13 +1,52 @@
 package rides;
 
-import program.Desk;
+public class CashDesk {
+	private int numOfTicket;
 
-public class CashDesk implements Desk {
+	private double revenue;
 
-	@Override
-	public void purchase() {
-		// TODO Auto-generated method stub
-		
+	public CashDesk() {
+
+		setNumOfTicket();
+
+		setRevenue();
+
+	}
+
+	public int getCountOfTickets() {
+
+		return numOfTicket;
+
+	}
+
+	public void setNumOfTicket() {
+
+		numOfTicket = BumperCars.getCounter() + HauntedHouse.getCounter() + JumpAndSmile.getCounter() +
+
+				MirrorMaze.getCounter() + TopSpin.getCounter() + Tornado.getCounter();
+
+	}
+
+	public int getNumOfTicket() {
+
+		return numOfTicket;
+
+	}
+
+	public void setRevenue() {
+
+		revenue = BumperCars.getCounter() * BumperCars.price + HauntedHouse.getCounter() * HauntedHouse.price +
+
+				Tornado.getCounter() * Tornado.price + TopSpin.getCounter() * TopSpin.getCounter() * TopSpin.price +
+
+				JumpAndSmile.getCounter() * JumpAndSmile.price + MirrorMaze.getCounter() * MirrorMaze.price;
+
+	}
+
+	public double getRevenue() {
+
+		return revenue;
+
 	}
 
 }

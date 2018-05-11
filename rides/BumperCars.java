@@ -1,45 +1,45 @@
 package rides;
 
 public class BumperCars extends AmusementRide {
+	private static int counter = 0;
 
-	private String name;
-	private double price = 2.5;
-	private int timesRun;
+	public final static double price = 2.50;
 
-	public String getName() {
-		return name;
+	public BumperCars() {
+
+		this.name = "BumperCars";
+
+		counter++;
+
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
+	public static int getCounter() {
 
-	public double getPrice() {
-		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-	public int getTimesRun() {
-		return timesRun;
-	}
-
-	public void setTimesRun(int timesRun) {
-		this.timesRun = timesRun;
-	}
-
-	@Override
-	public void run() {
-		System.out.println("Bumper Cars. Ride is run!");
+		return counter;
 
 	}
 
 	@Override
+
 	public void sell() {
-		System.out.println("Bumper Cars. Sale is made.");
+
+		System.out.println("selling a BumperCars");
 
 	}
 
+	@Override
+
+	public void run() {
+
+		System.out.println("running a BumperCars");
+
+	}
+
+	@Override
+
+	public String toString() {
+
+		return "name of ride:" + this.name + "\tPrice of the ride:" + BumperCars.price;
+
+	}
 }

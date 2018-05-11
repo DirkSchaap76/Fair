@@ -1,15 +1,10 @@
 package rides;
 
-public class AmusementRide {
+public abstract class AmusementRide {
 
-	public void run() {
-	};
+	public String name;
 
-	public void sell() {
-	};
+	public abstract void sell();
 
-	/*public double getPrice() {
-		return getPrice();
-	}
-*/
+	public abstract void run();
 }
